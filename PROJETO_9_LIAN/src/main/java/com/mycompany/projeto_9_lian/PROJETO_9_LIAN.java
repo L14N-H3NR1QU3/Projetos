@@ -20,7 +20,8 @@ public class PROJETO_9_LIAN {
         int tempo = 0;
         for(int i = 1; i <= 3; i++){
             /*as 3 vias*/
-            for(int j = 0; j < 600; j++){
+            for(int j = 0; j < 200; j++){
+                System.out.println(j+" ");
                 if(tempo == 80){
                     /*tempo em que ocorre o ciclo do semaforo*/
                     tempo = 0;
@@ -48,6 +49,7 @@ public class PROJETO_9_LIAN {
                         System.out.println("Carro sai no sinal "+i);
                         carros--;
                         tempo++;
+                        j++;
                     }
                 }
                 else if((tempo > 30) && (tempo <= 35)){
