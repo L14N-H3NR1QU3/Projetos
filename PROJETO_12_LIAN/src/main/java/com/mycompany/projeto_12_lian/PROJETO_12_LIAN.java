@@ -10,9 +10,9 @@ package com.mycompany.projeto_12_lian;
  */
 import java.util.Scanner;
 public class PROJETO_12_LIAN {
-    static Scanner ler = new Scanner (System.in);
     static String nomeFilme;
     public static void main(String[] args) {
+        Scanner ler = new Scanner (System.in);
         String[] nome = new String[2];
         String[] dica = new String[5];
         System.out.println("Nome do primeiro jogador: ");
@@ -23,6 +23,7 @@ public class PROJETO_12_LIAN {
         player2(nome, dica);
     }
     public static void player1 (String[] nome, String[] dica){
+        Scanner ler = new Scanner (System.in);
         System.out.println("Digite o nome do filme "+nome[0]+": ");
         nomeFilme = ler.next();
         System.out.println("O nome do filme e: "+nomeFilme);
@@ -32,6 +33,7 @@ public class PROJETO_12_LIAN {
         }
     }
     public static void player2 (String[] nome, String[] dica){
+        Scanner ler = new Scanner (System.in);
         int chance = 5;
         System.out.println("O nome do filme e: "+nomeFilme);
         for(int i = 0; i < 5; i++){
