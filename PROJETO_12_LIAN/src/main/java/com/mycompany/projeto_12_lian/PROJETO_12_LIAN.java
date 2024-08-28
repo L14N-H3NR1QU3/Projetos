@@ -26,7 +26,6 @@ public class PROJETO_12_LIAN {
         Scanner ler = new Scanner (System.in);
         System.out.println("Digite o nome do filme "+nome[0]+": ");
         nomeFilme = ler.next();
-        System.out.println("O nome do filme e: "+nomeFilme);
         for(int i = 0; i < 5; i++){
             System.out.println("Digite a dica "+(i+1)+":");
             dica[i] = ler.next();
@@ -35,7 +34,6 @@ public class PROJETO_12_LIAN {
     public static void player2 (String[] nome, String[] dica){
         Scanner ler = new Scanner (System.in);
         int chance = 5;
-        System.out.println("O nome do filme e: "+nomeFilme);
         for(int i = 0; i < 5; i++){
             System.out.println("Sua primeira dica e: "+dica[i]);
             System.out.println("Digite o filme "+nome[1]+": ");
