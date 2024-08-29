@@ -35,7 +35,7 @@ public class PROJETO_12_LIAN {
         Scanner ler = new Scanner (System.in);
         int chance = 5;
         for(int i = 0; i < 5; i++){
-            System.out.println("Sua primeira dica e: "+dica[i]);
+            System.out.println("Sua dica e: "+dica[i]);
             System.out.println("Digite o filme "+nome[1]+": ");
             String resp = ler.next();
             if(resp.equals(nomeFilme)){
