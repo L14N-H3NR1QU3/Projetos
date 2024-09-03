@@ -39,85 +39,85 @@ public class PROJETO_LIAN_13 {
                     break;
                 }
             }
-            for(int i = 0; i < tam; i++){
-                if(!res.equals("0") && vet[i] == 0){
-                    System.out.println("Erro!");
+            if(vet[tam-1] == 0 && !res.equals("0")){}
+            else{
+                for(int i = 0; i < tam; i++){
+                    if(!res.equals("0") && vet[i] == 0){
+                        System.out.println("Erro!");
+                    }
+                    else{
+                        System.out.println("Numero: "+vet[i]+" Indice: "+i);
+                    }
                 }
-                else{
-                    System.out.println("Numero: "+vet[i]+" Indice: "+i);
-                }
-            }
-            for(int i = 0; i < tam; i++){
-                System.out.println("Escolha: \n 1 - Soma \n 2 - Subtracao \n 3 - Multiplicacao \n 4 - Divisao");
-                res = ler.next();
-                try{
-                    op = Integer.parseInt(res);
-                }
-                catch(NumberFormatException e){
-                    System.out.println("Erro: escolha invalida.");
-                    break;
-                }
-                if(op > 4 || op < 0){
-                    break;
-                }
-                System.out.println("Escolha o primeiro indice: ");
-                res = ler.next();
-                try{
-                    ind1 = Integer.parseInt(res);
-                    if(ind1 >= tam){
+                for(int i = 0; i < tam; i++){
+                    System.out.println("Escolha: \n 1 - Soma \n 2 - Subtracao \n 3 - Multiplicacao \n 4 - Divisao");
+                    res = ler.next();
+                    try{
+                        op = Integer.parseInt(res);
+                    }
+                    catch(NumberFormatException e){
+                        System.out.println("Erro: escolha invalida.");
+                        break;
+                    }
+                    System.out.println("Escolha o primeiro indice: ");
+                    res = ler.next();
+                    try{
+                        ind1 = Integer.parseInt(res);
+                        if(ind1 >= tam){
+                            System.out.println("Erro: primeiro indice invalido.");
+                            break;
+                        }
+                    }
+                    catch(NumberFormatException e){
                         System.out.println("Erro: primeiro indice invalido.");
                         break;
                     }
-                }
-                catch(NumberFormatException e){
-                    System.out.println("Erro: primeiro indice invalido.");
-                    break;
-                }
-                System.out.println("Escolha o segundo indice: ");
-                res = ler.next();
-                try{
-                    ind2 = Integer.parseInt(res);
-                    if(ind1 >= tam){
-                        break;
-                    }
-                }
-                catch(NumberFormatException e2){
-                    System.out.println("Erro: segundo indice invalido.");
-                    i--;
-                }
-                if(ind1 < tam && ind2 < tam){
-                    switch(op){
-                        case 1:
-                                resultados[i] = vet[ind1] + vet[ind2];
-                                System.out.println("Resultado "+(i+1)+": "+resultados[i]);
-                            break;
-                        case 2:
-                                resultados[i] = vet[ind1] - vet[ind2];
-                                System.out.println("Resultado "+(i+1)+": "+resultados[i]);
-                            break;
-                        case 3:
-                                resultados[i] = vet[ind1] * vet[ind2];
-                                System.out.println("Resultado "+(i+1)+": "+resultados[i]);
-                            break;
-                        case 4:
-                            try{
-                                double num1 = vet[ind1], num2 = vet[ind2];
-                                resultados[i] = num1 / num2;
-                                System.out.println("Resultado "+(i+1)+": "+resultados[i]);
-                            }
-                            catch(ArithmeticException e){
-                                System.out.println("Erro: calculo indisponivael");
-                                break;
-                            }
-                            break;
-                        default:
-                                System.out.println("Erro: operador invalido.");
+                    System.out.println("Escolha o segundo indice: ");
+                    res = ler.next();
+                    try{
+                        ind2 = Integer.parseInt(res);
+                        if(ind1 >= tam){
                             break;
                         }
-                }
-                else{
-                    System.out.print("Erro: segundo indice invalido.");
-                    break;
+                    }
+                    catch(NumberFormatException e2){
+                        System.out.println("Erro: segundo indice invalido.");
+                        i--;
+                    }
+                    if(ind1 < tam && ind2 < tam){
+                        switch(op){
+                            case 1:
+                                    resultados[i] = vet[ind1] + vet[ind2];
+                                    System.out.println("Resultado "+(i+1)+": "+resultados[i]);
+                                break;
+                            case 2:
+                                    resultados[i] = vet[ind1] - vet[ind2];
+                                    System.out.println("Resultado "+(i+1)+": "+resultados[i]);
+                                break;
+                            case 3:
+                                    resultados[i] = vet[ind1] * vet[ind2];
+                                    System.out.println("Resultado "+(i+1)+": "+resultados[i]);
+                                break;
+                            case 4:
+                                try{
+                                    double num1 = vet[ind1], num2 = vet[ind2];
+                                    resultados[i] = num1 / num2;
+                                    System.out.println("Resultado "+(i+1)+": "+resultados[i]);
+                                }
+                                catch(ArithmeticException e){
+                                    System.out.println("Erro: calculo indisponivael");
+                                    break;
+                                }
+                                break;
+                            default:
+                                System.out.println("Erro: operacao invalida.");
+                                break;
+                            }
+                    }
+                    else{
+                        System.out.print("Erro: segundo indice invalido.");
+                        break;
+                    }
                 }
             }
         }
