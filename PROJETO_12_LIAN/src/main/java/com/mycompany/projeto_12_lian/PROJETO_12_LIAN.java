@@ -36,11 +36,7 @@ public class PROJETO_12_LIAN {
         int chance = 5;
         for(int i = 0; i < 5; i++){
             System.out.println("Sua dica e: "+dica[i]);
-<<<<<<< HEAD
             System.out.print("Digite o filme "+nome[1]+": ");
-=======
-            System.out.println("Digite o filme "+nome[1]+": ");
->>>>>>> 3a1b46298b7926a8f2e9ec33e9f3129f6129ee13
             String resp = ler.next();
             if(resp.equals(nomeFilme)){
                 System.out.println("Acertou o filme e "+resp+"! Parabens!");

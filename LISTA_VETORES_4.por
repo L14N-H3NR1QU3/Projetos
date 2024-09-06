@@ -1,19 +1,17 @@
 programa
 {
-	inteiro vet[20]
+	inteiro vet[20]
 	funcao inicio()
 	{
-	/*Escreva um algoritmo em PORTUGOL que armazene em um vetor o quadrado dos
-	números ímpares no intervalo fechado de 1 a 20. Após isso, o algoritmo deve imprimir todos
-	os valores armazenados*/
-	para(inteiro i = 0; i < 20; i++){
-		se((i+1)%2 != 0){
-			vet[i] = ((i+1)*(i+1))
+		para(inteiro i = 0; i < 20; i++)
+		{
+			vet[i] = i+1
+			se((i+1)%2 != 0)
+			{	
+				vet[i] = (i+1)*(i+1)
+			}
+			escreva(vet[i], "\n")
 		}
-	}
-	para(inteiro i = 0; i < 20; i++){
-		escreva(vet[i], "\n")	
-	}
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -21,7 +19,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 320; 
+ * @POSICAO-CURSOR = 157; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
