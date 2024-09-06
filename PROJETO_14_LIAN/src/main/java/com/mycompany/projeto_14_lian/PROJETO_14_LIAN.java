@@ -13,7 +13,7 @@ import java.io.IOException;
 public class PROJETO_14_LIAN {
 
     public static void main(String[] args) throws IOException {
-        int n = 3;
+        int n = 5;
         int num[][] = new int[n][n];
         int repNum = 0;
         int auxNum = 0;
