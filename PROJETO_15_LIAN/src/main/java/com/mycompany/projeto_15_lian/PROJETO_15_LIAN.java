@@ -21,13 +21,13 @@ public class PROJETO_15_LIAN {
         Date tempo = new Date();
         FileWriter arquivo[] = new FileWriter [5];
         String valor = "";
-        Double numero[] = new Double [5];
+        int numero[] = new int [5];
         for(int i = 0; i < 5; i++){
             System.out.println("--------------------------------------------");
             System.out.println("Digite um numero para taboada:");
             valor = sc.next();
             try{
-                numero[i] = Double.parseDouble(correcao(valor));
+                numero[i] = Integer.parseInt(correcao(valor));
             }
             catch(NumberFormatException e){
                 System.out.println("Erro: valor invalida!");
